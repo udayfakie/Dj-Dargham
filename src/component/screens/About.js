@@ -9,7 +9,7 @@ const About = () => {
         <DImg src={Img} alt="img" />
         <AboutText>
           <Title>About Us</Title>
-          <SubTitle>Dj<StyledSpan>& Party Producer</StyledSpan></SubTitle>
+          <SubTitle>Dj<StyledSpan> / Party Producer</StyledSpan></SubTitle>
           <Dargham>
             DJ Dargham's Roadshow aims to exceed all your entertainment
             expectations. Offering a bespoke musical experience, whatever the
@@ -43,7 +43,7 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 const SubTitle = styled.h2`
-color: red;
+color: gold;
 font-size: 25px;
 text-transform: capitalize;
 margin-bottom: 25px;

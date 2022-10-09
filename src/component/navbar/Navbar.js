@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import logo from '../../assets/ddlogo (2).png'
 
 const Navbar = () => {
   return (
     <NavContinaer>
-      <LogoLinks to="/">DJ Dargham</LogoLinks>
-
+      <LogoLinks to="/">
+      <LogoImg src={logo} alt="logo"/></LogoLinks>
       <Ul>
         <Li>
           <NavbarLinks
@@ -20,10 +21,10 @@ const Navbar = () => {
           </NavbarLinks>
         </Li>
         <Li>
-          <NavbarLinks to="/about">About</NavbarLinks>
+          <NavbarLinks to="/about">About Us</NavbarLinks>
         </Li>
         <Li>
-          <NavbarLinks to="/contact">Contact</NavbarLinks>
+          <NavbarLinks to="/contact">Contact Us</NavbarLinks>
         </Li>
       </Ul>
     </NavContinaer>
@@ -52,6 +53,10 @@ export const NavContinaer = styled.nav`
     height: 80px;
   }
 `;
+const LogoImg = styled.img`
+width: 150px;
+
+`
 export const NavbarLinks = styled(NavLink)`
   color: white;
   font-weight: 800;
