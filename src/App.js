@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyles";
-import Contact from "./component/screens/Contact";
-import About from "./component/screens/About";
-import Navbar from "./component/navbar/Navbar";
-import Home from "./component/screens/Home";
+import Contact from "./screens/Contact";
+import About from "./screens/About";
+import Navbar from "./components/Navbar";
+import Home from "./screens/Home";
 
 const App = () => {
   return (
