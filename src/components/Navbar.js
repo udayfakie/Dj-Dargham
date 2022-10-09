@@ -1,22 +1,17 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-import logo from '../../assets/ddlogo (2).png'
+import logo from "../assets/ddlogo (2).png";
 
 const Navbar = () => {
   return (
     <NavContinaer>
       <LogoLinks to="/">
-      <LogoImg src={logo} alt="logo"/></LogoLinks>
+        <LogoImg src={logo} alt="logo" />
+      </LogoLinks>
       <Ul>
         <Li>
-          <NavbarLinks
-            style={({ isActive }) => {
-              return isActive ? { color: "red" } : {};
-            }}
-            end
-            to="/"
-          >
+          <NavbarLinks end to="/">
             Home
           </NavbarLinks>
         </Li>
@@ -54,9 +49,8 @@ export const NavContinaer = styled.nav`
   }
 `;
 const LogoImg = styled.img`
-width: 150px;
-
-`
+  width: 150px;
+`;
 export const NavbarLinks = styled(NavLink)`
   color: white;
   font-weight: 800;
@@ -65,6 +59,14 @@ export const NavbarLinks = styled(NavLink)`
   text-decoration: none;
   margin: 10px;
 `;
+
+export const SpecialLink = styled(NavbarLinks)`
+  ${({ isActive }) =>
+    isActive &&
+    `
+color: red`}
+`;
+
 export const LogoLinks = styled(Link)`
   color: white;
   font-weight: 800;

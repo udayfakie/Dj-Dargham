@@ -1,7 +1,7 @@
 import React from "react";
-
+import { SOUNDCLOUD_LINKS } from "../constants";
 import styled from "styled-components";
-import SoundcloudBtn from "../../assets/play.png";
+import SoundcloudBtn from "../assets/play.png";
 
 const Home = () => {
   return (
@@ -10,22 +10,14 @@ const Home = () => {
         <DivTitle>
           <Title>Discover Music</Title>
         </DivTitle>
-        <A href="https://soundcloud.com/dargham-azhri/afrobeat-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
-          <MyImg src={SoundcloudBtn} alt="img" />
-          AFROBEATS
-        </A>
-        <A href="https://soundcloud.com/dargham-azhri/afrobeat-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
-          <MyImg src={SoundcloudBtn} alt="img" />
-          AFROBEATS
-        </A>
-        <A href="https://soundcloud.com/dargham-azhri/afrobeat-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
-          <MyImg src={SoundcloudBtn} alt="img" />
-          AFROBEATS
-        </A>
-        <A href="https://soundcloud.com/dargham-azhri/afrobeat-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
-          <MyImg src={SoundcloudBtn} alt="img" />
-          AFROBEATS
-        </A>
+        {SOUNDCLOUD_LINKS?.map((link) => {
+          return (
+            <Link href={link}>
+              <MyImg src={SoundcloudBtn} alt="img" />
+              AFROBEATS
+            </Link>
+          );
+        })}
       </C>
     </Container>
   );
@@ -41,7 +33,7 @@ const Container = styled.div`
   height: 100vh;
 `;
 const C = styled.div`
-position: fixed;
+  position: fixed;
   width: 90%;
   height: auto;
   display: flex;
@@ -64,7 +56,7 @@ const DivTitle = styled.div`
   /* background-color: green; */
 `;
 
-const A = styled.a`
+const Link = styled.a`
   /* background-color: green; */
   margin: 15px;
   text-decoration: none;

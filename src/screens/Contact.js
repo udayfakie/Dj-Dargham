@@ -7,36 +7,30 @@ import {
   faSoundcloud,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-
+import ContactForm from "../components/Contact/ContactForm";
 import styled from "styled-components";
 
 const Contact = () => {
   return (
     <MainContainer>
-      <MyForm>
-        <GitInTouch>Get In Touch</GitInTouch>
-        <InputsType type="text" name="name" placeholder="Your Name" required />
-        <InputsType type="email" name="email" placeholder="Your Email" required />
-        <InputsType rows="4" name="message" placeholder=" Your Message..."></InputsType>
-        <BBtn type="submit">Submit</BBtn>
-        <Iconss>
-          <IiconsLinks href="https://www.facebook.com/dargham.azhrie">
-            <FontAwesomeIcon icon={faInstagram} />
-          </IiconsLinks>
-          <IiconsLinks href="https://www.facebook.com/dargham.azhrie">
-            <FontAwesomeIcon icon={faFacebook} />
-          </IiconsLinks>
-          <IiconsLinks href="https://soundcloud.com/dargham-azhri">
-            <FontAwesomeIcon icon={faSoundcloud} />
-          </IiconsLinks>
-          <IiconsLinks href="https://www.facebook.com/dargham.azhrie">
-            <FontAwesomeIcon icon={faTwitter} />
-          </IiconsLinks>
-          <IiconsLinks href="https://www.facebook.com/dargham.azhrie">
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </IiconsLinks>
-        </Iconss>
-      </MyForm>
+      <ContactForm />
+      <Iconss>
+        <IiconsLinks href="https://www.facebook.com/dargham.azhrie">
+          <FontAwesomeIcon icon={faInstagram} />
+        </IiconsLinks>
+        <IiconsLinks href="https://www.facebook.com/dargham.azhrie">
+          <FontAwesomeIcon icon={faFacebook} />
+        </IiconsLinks>
+        <IiconsLinks href="https://soundcloud.com/dargham-azhri">
+          <FontAwesomeIcon icon={faSoundcloud} />
+        </IiconsLinks>
+        <IiconsLinks href="https://www.facebook.com/dargham.azhrie">
+          <FontAwesomeIcon icon={faTwitter} />
+        </IiconsLinks>
+        <IiconsLinks href="https://www.facebook.com/dargham.azhrie">
+          <FontAwesomeIcon icon={faLinkedinIn} />
+        </IiconsLinks>
+      </Iconss>
     </MainContainer>
   );
 };

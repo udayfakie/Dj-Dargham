@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "../../assets/IMG_2273.JPG";
+import Img from "../assets/IMG_2273.JPG";
 
 const About = () => {
   return (
@@ -9,7 +9,9 @@ const About = () => {
         <DImg src={Img} alt="img" />
         <AboutText>
           <Title>About Us</Title>
-          <SubTitle>Dj<StyledSpan> / Party Producer</StyledSpan></SubTitle>
+          <SubTitle>
+            Dj<StyledSpan> / Party Producer</StyledSpan>
+          </SubTitle>
           <Dargham>
             DJ Dargham's Roadshow aims to exceed all your entertainment
             expectations. Offering a bespoke musical experience, whatever the
@@ -33,8 +35,7 @@ export default About;
 
 const AboutContainer = styled.section`
   width: 100%;
- /* padding: 78px 0px ; */
-
+  /* padding: 78px 0px ; */
 `;
 const Title = styled.h1`
   color: darkblue;
@@ -43,11 +44,11 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 const SubTitle = styled.h2`
-color: gold;
-font-size: 25px;
-text-transform: capitalize;
-margin-bottom: 25px;
-letter-spacing: 2px;
+  color: gold;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
 `;
 const Dargham = styled.p`
   color: #fcfc;
@@ -69,12 +70,11 @@ const Maintaine = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-around;
- 
 `;
 
 const AboutText = styled.div`
-width: 550px;
-`
+  width: 550px;
+`;
 const StyledSpan = styled.span`
-color: orange;
-`
+  color: orange;
+`;
