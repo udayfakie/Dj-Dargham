@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 }
   body{
     ${"" /* background-color: lightblue; */}
+    ${'' /* height: 100vh; */}
     background-image: url('https://daily.jstor.org/wp-content/uploads/2018/05/kingdom_of_kush_1050x700.jpg');
     background-repeat: no-repeat;
     background-size: cover;

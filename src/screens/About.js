@@ -61,6 +61,11 @@ const Dargham = styled.p`
 const DImg = styled.img`
   width: 420px;
   height: auto;
+  @media screen and (max-width:820px) {
+  display: none;
+  transition: ease-in .7s;
+  /* transition: ease-out .7s; */
+}
 `;
 
 const Maintaine = styled.div`

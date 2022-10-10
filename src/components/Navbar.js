@@ -10,15 +10,15 @@ const Navbar = () => {
         <LogoImg src={logo} alt="logo" />
       </LogoLinks>
       <Ul>
-        <Li>
+        <Li key='li_1'>
           <NavbarLinks end to="/">
             Home
           </NavbarLinks>
         </Li>
-        <Li>
+        <Li key='li_2'>
           <NavbarLinks to="/about">About Us</NavbarLinks>
         </Li>
-        <Li>
+        <Li key='li_3'>
           <NavbarLinks to="/contact">Contact Us</NavbarLinks>
         </Li>
       </Ul>
@@ -30,7 +30,6 @@ export default Navbar;
 
 export const NavContinaer = styled.nav`
   display: flex;
-
   width: 100%;
   height: 100px;
   background-color: transparent;
@@ -52,7 +51,7 @@ const LogoImg = styled.img`
   width: 150px;
 `;
 export const NavbarLinks = styled(NavLink)`
-  color: white;
+  color: gray;
   font-weight: 800;
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;

@@ -41,60 +41,20 @@ const MainContainer = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+  
   justify-content: center;
   align-items: center;
-`;
-const GitInTouch = styled.h2`
-  color: gray;
-  font-weight: 800;
-  margin-bottom: 20px;
-  filter: drop-shadow(4px 3px 4px #000);
-`;
-const MyForm = styled.form`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 2vw 4vw;
-
-  max-width: 600px;
-  border-radius: 10px;
-  position: absolute;
-`;
-
-const InputsType = styled.input`
-  border: 0;
-  margin: 10px 0;
-  padding: 20px;
-  outline: none;
-  background: #f5f5f5;
-  font-size: 20px;
-  border-radius: 10px;
-  filter: drop-shadow(4px 3px 4px #000);
-`;
-
-const BBtn = styled.button`
-  padding: 15px;
-  background-image: linear-gradient(black, white);
-  color: #fff;
-  font-size: 18px;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  width: 150px;
-  margin: 20px auto 0;
-  border-radius: 15px;
-  font-weight: 700;
-  color: black;
-  filter: drop-shadow(4px 3px 4px #000);
 `;
 
 const Iconss = styled.div`
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  margin: 55px;
+position: relative;
+top: 10rem;
+@media screen and (max-width:820px) {
+  top: 2rem;
+  transition: ease-in-out .7s;
+  /* transition: ease-out .7s; */
+}
+  
 `;
 
 const IiconsLinks = styled.a`

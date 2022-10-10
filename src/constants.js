@@ -7,8 +7,16 @@ export const SOUNDCLOUD_LINKS = [
 
 export const LINKS = [
   {
-    title: "Title",
-    url: "url",
+    title: "AfroBit",
+    url: "https://soundcloud.com/dargham-azhri/afrobeat-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  },
+  {
+    title: "Hip Hop",
+    url: "https://soundcloud.com/dargham-azhri/afrobeat-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  },
+  {
+    title: "DanceHall",
+    url: "https://soundcloud.com/dargham-azhri/afrobeat-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
 ];
 

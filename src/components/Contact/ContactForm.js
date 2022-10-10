@@ -17,6 +17,7 @@ export default ContactForm;
 
 const GitInTouch = styled.h2`
   color: gray;
+  font-size: 40px;
   font-weight: 800;
   margin-bottom: 20px;
   filter: drop-shadow(4px 3px 4px #000);
@@ -27,7 +28,6 @@ const MyForm = styled.form`
   display: flex;
   flex-direction: column;
   padding: 2vw 4vw;
-
   max-width: 600px;
   border-radius: 10px;
   position: absolute;
