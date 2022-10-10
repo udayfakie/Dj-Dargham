@@ -16,7 +16,7 @@ const Home = () => {
             <Img src={SoundcloudBtn} alt="img" />
             AFROBEATS
           </Link>
-        );
+        ); 
       })}
     </Container>
   );
@@ -51,7 +51,7 @@ const Link = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 250px;
+  width: 250px; 
 `;
 const Img = styled.img`
   width: 60px;
