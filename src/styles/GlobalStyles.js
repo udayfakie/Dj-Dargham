@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     background-image: url('https://daily.jstor.org/wp-content/uploads/2018/05/kingdom_of_kush_1050x700.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    
   }
 `;
 

@@ -10,15 +10,15 @@ const Navbar = () => {
         <LogoImg src={logo} alt="logo" />
       </LogoLinks>
       <Ul>
-        <Li key='li_1'>
+        <Li key="li_1">
           <NavbarLinks end to="/">
             Home
           </NavbarLinks>
         </Li>
-        <Li key='li_2'>
+        <Li key="li_2">
           <NavbarLinks to="/about">About Us</NavbarLinks>
         </Li>
-        <Li key='li_3'>
+        <Li key="li_3">
           <NavbarLinks to="/contact">Contact Us</NavbarLinks>
         </Li>
       </Ul>
@@ -32,7 +32,6 @@ export const NavContinaer = styled.nav`
   display: flex;
   width: 100%;
   height: 100px;
-  background-color: transparent;
   align-items: center;
   justify-content: space-between;
   align-items: center;
@@ -40,15 +39,21 @@ export const NavContinaer = styled.nav`
   padding: 0 1rem;
 
   .active {
-    color: orange;
-  }
-
-  @media (min-width: 700px) {
-    height: 80px;
+    color: darkorange;
   }
 `;
+
 const LogoImg = styled.img`
   width: 150px;
+`;
+const Li = styled.li`
+  list-style-type: none;
+`;
+const Ul = styled.ul`
+  display: flex;
+  @media (max-width: 990px) {
+    display: none;
+  }
 `;
 export const NavbarLinks = styled(NavLink)`
   color: gray;
@@ -73,11 +78,4 @@ export const LogoLinks = styled(Link)`
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 10px;
-`;
-
-const Li = styled.li`
-  list-style-type: none;
-`;
-const Ul = styled.ul`
-  display: flex;
 `;
