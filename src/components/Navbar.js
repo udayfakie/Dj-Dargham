@@ -39,7 +39,8 @@ export const NavContinaer = styled.nav`
   padding: 0 1rem;
 
   .active {
-    color: darkorange;
+    color: #f88f54;
+    
   }
 `;
 
@@ -56,19 +57,19 @@ const Ul = styled.ul`
   }
 `;
 export const NavbarLinks = styled(NavLink)`
-  color: gray;
+  color: #000;
   font-weight: 800;
   font-size: x-large;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   text-decoration: none;
   margin: 10px;
-`;
-
-export const SpecialLink = styled(NavbarLinks)`
-  ${({ isActive }) =>
-    isActive &&
-    `
-color: red`}
+  transition: all 2s ease-in-out;
+  transition-duration: 1s;
+  :hover{
+    opacity: 0.8;
+    background-color: gray;
+    border-radius: 8px;
+  }
 `;
 
 export const LogoLinks = styled(Link)`

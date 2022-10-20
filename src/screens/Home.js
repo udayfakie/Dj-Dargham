@@ -1,25 +1,25 @@
 import React from "react";
 import { SOUNDCLOUD_LINKS } from "../constants";
 import styled from "styled-components";
-import SoundcloudBtn from "../assets/play.png";
+import SoundcloudBtn from "../assets/icon-soundcloud-play.png";
 
 const Home = () => {
   return (
     <Container>
-      <DivTitle>
-      </DivTitle>
-        <Title>Discover Music</Title>
-      {SOUNDCLOUD_LINKS?.map((link, index) => {
-        const { title, url } = link;
-        return (
-          <LinkContainer key={index}>
-            <Link href={`${url}`}>
-              <Img src={SoundcloudBtn} alt="img" />
-              <H2> {`${title}`}</H2>
-            </Link>
-          </LinkContainer>
-        );
-      })}
+      <Title>Discover Music</Title>
+      <SubContaine>
+        {SOUNDCLOUD_LINKS?.map((link, index) => {
+          const { title, url } = link;
+          return (
+            <LinkContainer key={index}>
+              <Link target='_blank' href={`${url}`}>
+                <Img src={SoundcloudBtn} alt="img" />
+                <H2> {`${title}`}</H2>
+              </Link>
+            </LinkContainer>
+          );
+        })}
+      </SubContaine>
     </Container>
   );
 };
@@ -27,56 +27,62 @@ const Home = () => {
 export default Home;
 
 const Container = styled.div`
-  align-items: center;
-  flex-direction: column;
-  display: flex;
   width: 100%;
   height: 100vh;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+const SubContaine = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 2rem;
 `;
 const LinkContainer = styled.div`
-  display: flex;
-position: relative;
-  top: 3rem;
-  right: 28rem;
-  align-items: center;
-  margin: 5px;
-  width: 300px;
- 
+  width: 15%;
+  margin: 10px;
+  
   transition-duration: 4s;
-
-  @media (max-width: 990px) {
-    margin-left:57rem;
-    margin-top: 2rem;
+  @media (max-width: 600px) {
+    width: 90%;
     background-color: gray;
     border-radius: 25px;
     color: black;
-    &:hover{
+    &:hover {
       opacity: 0.5;
     }
   }
+  @media (max-width: 821px) {
+    width: 40%;
+  }
 `;
 const H2 = styled.h2`
-  color: #fff;
-  font-size: 20px;
+  align-items: center;
   display: flex;
+  color: #fff;
+  font-size: 1rem;
   transition: transform 1s;
-  position: relative;
-  left: 1rem;
+  margin-left: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   &:hover {
     opacity: 0.7;
     transform: translatey(15%);
-    
   }
   @media (max-width: 990px) {
-   font-family: sans-serif;
+    font-family: sans-serif;
     color: black;
   }
 `;
 
 const Title = styled.h1`
-  font-size: 80px;
+  font-size: 3rem;
   color: black;
   opacity: 0.5;
 
@@ -86,22 +92,20 @@ const Title = styled.h1`
     color: black;
   }
 `;
-const DivTitle = styled.div`
-  /* display: flex;
-  justify-content: center; */
-  background-color: aqua;
-`;
 
 const Link = styled.a`
-  margin: 10px;
   text-decoration: none;
   color: white;
-  font-size: 20px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
 `;
 const Img = styled.img`
-  width: 60px;
-  display: flex;
+border-radius: 50%;
+  width: 2.5rem;
+  /* color: #f50; */
+  transition: all 1s ease-in-out;
+  :hover{
+    opacity: 0.5;
+   
+  }
 `;

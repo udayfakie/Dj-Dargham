@@ -6,16 +6,16 @@ import { IMG } from "../constants";
 const About = () => {
   return (
     <AboutContainer>
-      <Title>About Us</Title>
-      <Maintaine>
+      <Title>About me</Title>
+      <SubContainer>
         <DImg src={IMG} alt="img" />
         <AboutText>
           <SubTitle>Dj / Party Producer</SubTitle>
           <Dargham>
-            <Text />
+            {Text} 
           </Dargham>
         </AboutText>
-      </Maintaine>
+      </SubContainer>
     </AboutContainer>
   );
 };
@@ -25,7 +25,7 @@ export default About;
 const AboutContainer = styled.section`
   width: 100%;
 `;
-const Maintaine = styled.div`
+const SubContainer = styled.div`
   height: 100vh;
   max-width: 95%;
   margin: 0 auto;
@@ -33,7 +33,7 @@ const Maintaine = styled.div`
   display: flex;
   justify-content: space-around;
   position: relative;
-  bottom: 5rem;
+  bottom: 8rem;
 `;
 const Title = styled.h1`
   justify-content: center;
@@ -41,7 +41,7 @@ const Title = styled.h1`
   text-align: center;
   color: black;
   opacity: 0.5;
-  font-size: 80px;
+  font-size: 50px;
   text-transform: capitalize;
   margin-bottom: 20px;
 
@@ -50,7 +50,7 @@ const Title = styled.h1`
   }
 `;
 const SubTitle = styled.h2`
-  color: orange;
+  color: #000;
   font-size: 35px;
   text-transform: capitalize;
   margin-bottom: 25px;
@@ -65,7 +65,7 @@ const Dargham = styled.p`
 `;
 
 const DImg = styled.img`
-  width: 420px;
+  width: 400px;
   height: auto;
   border-radius: 30px;
   @media screen and (max-width: 820px) {
@@ -74,5 +74,5 @@ const DImg = styled.img`
 `;
 
 const AboutText = styled.div`
-  width: 550px;
+  width: 650px;
 `;

@@ -28,17 +28,4 @@ export const WHATSAPP = "https://www.facebook.com/dargham.azhrie";
 
 export const TARGET_BLANK = "_blank";
 
-export const Text = () => (
-  <p>
-    DJ Dargham's Roadshow aims to exceed all your entertainment expectations.
-    Offering a bespoke musical experience, whatever the occasion. DJ Dargham
-    will guarantee a professional service,whether it be a wedding, birthday or
-    corporate event, we promise to make it memorable for you and your guests. We
-    cater for clients of all backgrounds, ensuring a service specific to your
-    requirements, aiming to make your event unique from others At every event
-    the DJ Dargham Roadshow provides state of the art technology, leaving you
-    with both a majestic musical and visual experience. Rest assured if you book
-    DJ Dargham Roadshow for your event, you have guaranteed yourselves an
-    outstanding entertainment package.
-  </p>
-);
+export const Text = "DJ Dargham's Roadshow aims to exceed all your entertainment expectations.Offering a bespoke musical experience, whatever the occasion. DJ Dargham will guarantee a professional service,whether it be a wedding, birthday orcorporate event, we promise to make it memorable for you and your guests. We cater for clients of all backgrounds, ensuring a service specific to your requirements, aiming to make your event unique from others At every event the DJ Dargham Roadshow provides state of the art technology, leaving you with both a majestic musical and visual experience. Rest assured if you book DJ Dargham Roadshow for your event, you have guaranteed yourselves an outstanding entertainment package."
