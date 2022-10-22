@@ -33,25 +33,29 @@ const SubContainer = styled.div`
   display: flex;
   justify-content: space-around;
   position: relative;
-  bottom: 8rem;
+  bottom: 4rem;
 `;
 const Title = styled.h1`
   justify-content: center;
   display: flex;
   text-align: center;
   color: black;
-  opacity: 0.5;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   text-transform: capitalize;
   margin-bottom: 20px;
 
-  @media (max-width: 990px) {
-    font-size: 40px;
+  @media (max-width: 821px) {
+  
+  }
+  @media (max-width: 420px) {
+  color: #000;
   }
 `;
 const SubTitle = styled.h2`
-  color: #000;
-  font-size: 35px;
+  color: #fff;
+  
+  font-size: 65px;
   text-transform: capitalize;
   margin-bottom: 25px;
   letter-spacing: 2px;
