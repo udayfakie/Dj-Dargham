@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect, useRef  } from "react";
 import styled from "styled-components";
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Icons from "../Icons";
 
 const Contact = () => {
   const form = useRef();
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -31,7 +34,13 @@ const Contact = () => {
     <Container>
       <MyForm ref={form} onSubmit={sendEmail}>
         <GitInTouch>Get In Touch</GitInTouch>
-        <Input type="text" name="name" placeholder="Your Name" required />
+        <Input
+          ref={inputRef}
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
         <Input type="email" name="email" placeholder="Your Email" required />
         <Input rows="4" name="message" placeholder=" Your Message..."></Input>
         <Button type="submit" value="send">
@@ -63,7 +72,6 @@ const GitInTouch = styled.h2`
   filter: drop-shadow(4px 3px 4px #000);
 `;
 const MyForm = styled.form`
-
   width: 100%;
   height: auto;
   display: flex;
@@ -79,10 +87,16 @@ const Input = styled.input`
   margin: 10px 0;
   padding: 15px;
   outline: none;
-  background: #f5f5f5;
+  color: #fff;
+  opacity: 0.5;
+  background: gray;
   font-size: 20px;
   border-radius: 10px;
   filter: drop-shadow(4px 3px 4px #000);
+  ::placeholder {
+    font-weight: bold;
+    color: #fff;
+  }
 `;
 const Button = styled.button`
   padding: 15px;
