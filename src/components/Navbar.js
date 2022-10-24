@@ -25,10 +25,13 @@ const Navbar = () => {
           </Links>
         </Li>
         <Li key="li_2">
-          <Links to="/about">About Us</Links>
+          <Links to="/about">About</Links>
         </Li>
         <Li key="li_3">
-          <Links to="/contact">Contact Us</Links>
+          <Links to="/gallery">Gallery</Links>
+        </Li>
+        <Li key="li_4">
+          <Links to="/contact">Contact</Links>
         </Li>
       </Ul>
       {open ? (
@@ -39,10 +42,13 @@ const Navbar = () => {
             </Links>
           </BurgerLi>
           <BurgerLi key="li_2">
-            <Links to="/about">About Us</Links>
+            <Links to="/about">About </Links>
           </BurgerLi>
           <BurgerLi key="li_3">
-            <Links to="/contact">Contact Us</Links>
+            <Links to="/gallery">Gallery</Links>
+          </BurgerLi>
+          <BurgerLi key="li_4">
+            <Links to="/contact">Contact</Links>
           </BurgerLi>
         </BurgerMenuUl>
       ) : (

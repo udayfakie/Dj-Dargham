@@ -5,6 +5,7 @@ import About from "./screens/About";
 import Navbar from "./components/Navbar";
 import Home from "./screens/Home";
 import Contact from "./screens/Contact";
+import Gallery from "./screens/Gallery";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
     </>
