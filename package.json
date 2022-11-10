@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.1",
     "express-routes": "^1.0.1",
+    "framer-motion": "^7.6.5",
     "hamburger-react": "^2.5.0",
     "install": "^0.13.0",
     "npm": "^8.19.2",

@@ -5,7 +5,7 @@ import About from "./screens/About";
 import Navbar from "./components/Navbar";
 import Home from "./screens/Home";
 import Contact from "./screens/Contact";
-import Gallery from "./screens/Gallery";
+import Gallery from "./components/gallery/Gallery";
 
 
 const App = () => {
