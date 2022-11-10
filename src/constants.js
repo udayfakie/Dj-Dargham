@@ -1,3 +1,15 @@
+// import dar2 from "./assets/dar.jpg"
+
+export const IMAGES =[ {
+  id: 1,
+  image: "./assets/dar.jpg"
+},
+{
+  id: 1,
+  image: "./assets/dar.jpg"
+}
+]
+
 export const SOUNDCLOUD_LINKS = [
   {
     title: "AFRO FUSION",
@@ -16,7 +28,6 @@ export const SOUNDCLOUD_LINKS = [
     url: "https://soundcloud.com/dargham-azhri/dancehall?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
 ];
-
 
 export const FACEBOOK = "https://www.facebook.com/dargham.azhrie";
 export const SOUNDCLOUD = "https://soundcloud.com/dargham-azhri";
