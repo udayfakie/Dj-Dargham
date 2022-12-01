@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 
+
 const ProductImage = ({ id, onExpand }) => {
   return (
     <RelatedProductImageFirstChild
-      src={`https://picsum.photos/id/${id}/200/200`}
+      src={id}
       alt=""
       onClick={() => onExpand(id)}
       layoutId={`product-${id}`}
@@ -15,6 +16,7 @@ const ProductImage = ({ id, onExpand }) => {
 
 export default ProductImage;
 const RelatedProductImage = styled(motion.img)`
+
   border-radius: 10px;
   margin: 5px;
 `;
