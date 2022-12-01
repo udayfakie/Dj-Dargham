@@ -1,77 +1,95 @@
-import { motion,  AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
 import ProductImage from "./ProductImage";
-// import { IMAGES } from "../../constants";
-// import dar2 from '../../assets/darg2.jpg'
+import { IMAGES, img } from "../../constants";
+// import InstagramApi from "./InstagramApi";
 
 const Gallery = () => {
-
-  const [productIds, setProductIds] = useState([222, 999, 666,358,777,456,987]);
-  const [primaryProduct, setPrimaryProduct] = useState(555);
-  const setAsPrimary = (index) => {
+  const [productIds, setProductIds] = useState(IMAGES);
+  const [primaryProduct, setPrimaryProduct] = useState(img);
+  const setAsPrimary = (id) => {
     const currentProductId = primaryProduct;
     const newProductIds = [
-      ...productIds.filter((x) => x !== index),
+      ...productIds.filter((x) => x !== id),
       currentProductId,
     ];
-    setPrimaryProduct(index);
+
+    setPrimaryProduct(id);
     setProductIds(newProductIds);
   };
   return (
     <Container>
-      <PrimaryContainer>
-        <AnimatePresence>
-          <PrimaryProductImage
-            key={primaryProduct}
-            src={`https://picsum.photos/id/${primaryProduct}/1280/620`}
-            alt=""
-            layoutId={`product-${primaryProduct}`}
-          />
-        </AnimatePresence>
-      </PrimaryContainer>
-      <ProductGalleryFirstChild>
-        <AnimatePresence>
-          {productIds.map((id) => (
-            <ProductImage id={id} key={id} onExpand={setAsPrimary} />
-          ))}
-        </AnimatePresence>
-      </ProductGalleryFirstChild>
+      <SubContainer>
+        <PrimaryContainer>
+          <AnimatePresence>
+            <PrimaryProductImage
+              key={primaryProduct}
+              src={primaryProduct}
+              alt=""
+              layoutId={`product-${primaryProduct}`}
+            />
+          </AnimatePresence>
+        </PrimaryContainer>
+        <ProductGalleryFirstChild>
+          <AnimatePresence>
+            {productIds.map((id) => (
+              <ProductImage id={id} key={id} onExpand={setAsPrimary} />
+            ))}
+          </AnimatePresence>
+        </ProductGalleryFirstChild>
+        <div>
+          {/* <InstagramApi /> */}
+        </div>
+      </SubContainer>
     </Container>
   );
 };
 export default Gallery;
 
 const Container = styled.div`
-  font-family: sans-serif;
-  max-width: 1280px;
-  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+`;
+const SubContainer = styled.div`
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
-  height: 620px;
   overflow: hidden;
+  height: 600px;
 `;
 const PrimaryContainer = styled.main`
-  height: 620px;
-  min-width: 1070px;
-  border-radius: 1rem;
+  display: flex;
+  height: 100vh;
+  width: 50%;
+  border-radius: 11rem;
   position: relative;
 `;
 const PrimaryProductImage = styled(motion.img)`
-  height: 70%;
+  display: flex;
+  height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 1rem;
   position: absolute;
+  border-radius: 1rem;
   top: 0;
   left: 0;
+  @media (max-width: 577px) {
+    display: none;
+  }
 `;
 const ProductGallery = styled.aside`
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  height: 620px;
+  width: 250px;
   z-index: 1;
+  @media (max-width: 577px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 const ProductGalleryFirstChild = styled(ProductGallery)`
   margin-top: 0;

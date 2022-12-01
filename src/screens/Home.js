@@ -2,7 +2,7 @@ import React from "react";
 import { SOUNDCLOUD_LINKS } from "../constants";
 import styled from "styled-components";
 import SoundcloudBtn from "../assets/icon-soundcloud-play.png";
-
+import Videos from '../components/gallery/Videos'
 const Home = () => {
   return (
     <Container>
@@ -12,7 +12,7 @@ const Home = () => {
           const { title, url } = link;
           return (
             <LinkContainer key={index}>
-              <Link target='_blank' href={`${url}`}>
+              <Link target="_blank" href={`${url}`}>
                 <Img src={SoundcloudBtn} alt="img" />
                 <H2> {`${title}`}</H2>
               </Link>
@@ -20,6 +20,7 @@ const Home = () => {
           );
         })}
       </SubContaine>
+    <Videos/>
     </Container>
   );
 };
@@ -33,7 +34,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-`;
+  `;
 const SubContaine = styled.div`
   width: 100%;
   height: auto;
@@ -45,10 +46,11 @@ const SubContaine = styled.div`
   position: absolute;
   bottom: 2rem;
 `;
+
 const LinkContainer = styled.div`
   width: 15%;
   margin: 10px;
-  
+
   transition-duration: 4s;
   @media (max-width: 600px) {
     width: 90%;
@@ -82,6 +84,7 @@ const H2 = styled.h2`
 `;
 
 const Title = styled.h1`
+margin: 0 auto;
   font-size: 3rem;
   color: black;
   opacity: 0.5;
@@ -100,12 +103,11 @@ const Link = styled.a`
   flex-wrap: wrap;
 `;
 const Img = styled.img`
-border-radius: 50%;
+  border-radius: 50%;
   width: 2.5rem;
   /* color: #f50; */
   transition: all 1s ease-in-out;
-  :hover{
+  :hover {
     opacity: 0.5;
-   
   }
 `;

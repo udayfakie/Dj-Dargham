@@ -1,14 +1,15 @@
-// import dar2 from "./assets/dar.jpg"
+import img1 from "./assets/pics/1.jpg";
+import img2 from "./assets/pics/2.jpg";
+import img3 from "./assets/pics/3.jpg";
+import img4 from "./assets/pics/4.jpg";
+import img5 from "./assets/pics/5.jpg";
+import img6 from "./assets/pics/6.jpg";
+import img7 from "./assets/pics/7.jpg";
+import img8 from "./assets/pics/8.jpg";
+import img9 from "./assets/pics/9.jpg";
 
-export const IMAGES =[ {
-  id: 1,
-  image: "./assets/dar.jpg"
-},
-{
-  id: 1,
-  image: "./assets/dar.jpg"
-}
-]
+export const IMAGES = [img2, img3, img4, img5, img6, img7, img8, img9];
+export const img = img1;
 
 export const SOUNDCLOUD_LINKS = [
   {
@@ -36,4 +37,4 @@ export const INSTAGRAM = "https://www.instagram.com/dargham_azhri/";
 export const TARGET_BLANK = "_blank";
 
 export const Text =
-  "DJ Dargham's Roadshow aims to exceed all your entertainment expectations.Offering a bespoke musical experience, whatever the occasion. DJ Dargham will guarantee a professional service,whether it be a wedding, birthday orcorporate event, we promise to make it memorable for you and your guests. We cater for clients of all backgrounds, ensuring a service specific to your requirements, aiming to make your event unique from others At every event the DJ Dargham Roadshow provides state of the art technology, leaving you with both a majestic musical and visual experience. Rest assured if you book DJ Dargham Roadshow for your event, you have guaranteed yourselves an outstanding entertainment package.";
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the  with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";

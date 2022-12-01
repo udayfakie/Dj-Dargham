@@ -4,30 +4,26 @@ import { Text } from "../constants";
 
 const About = () => {
   return (
-    <SubContainer>
+    <Container>
       <Title>About me</Title>
       <SubTitle>Dj / Party Producer</SubTitle>
-      <Dargham>
-      {Text}
-      </Dargham>
-    </SubContainer>
+      <Dargham>{Text}</Dargham>
+    </Container>
   );
 };
 
 export default About;
 
-const SubContainer = styled.div`
-height: 100vh;
+const Container = styled.div`
+  height: 100vh;
   width: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   @media (max-width: 821px) {
-    
   }
   @media (max-width: 420px) {
-
   }
 `;
 const Title = styled.h1`
@@ -48,7 +44,7 @@ const Title = styled.h1`
 const SubTitle = styled.h2`
   color: darkorange;
 
-  font-size: 35px;
+  font-size: 25px;
   text-transform: capitalize;
   margin-bottom: 25px;
   letter-spacing: 2px;
@@ -60,9 +56,5 @@ const Dargham = styled.p`
   font-weight: 600;
   @media (max-width: 420px) {
     width: 25rem;
-}
-
+  }
 `;
-
-
-
