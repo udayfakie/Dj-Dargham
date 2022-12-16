@@ -44,7 +44,7 @@ const SubContaine = styled.div`
   align-content: flex-start;
   flex-wrap: wrap;
   position: absolute;
-  bottom: 2rem;
+  bottom: 5rem;
 `;
 
 const LinkContainer = styled.div`

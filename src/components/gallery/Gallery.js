@@ -3,7 +3,8 @@ import { useState } from "react";
 import styled from "styled-components";
 import ProductImage from "./ProductImage";
 import { IMAGES, img } from "../../constants";
-// import InstagramApi from "./InstagramApi";
+import { opacityAnimation } from "../../styles/GlobalStyles";
+
 
 const Gallery = () => {
   const [productIds, setProductIds] = useState(IMAGES);
@@ -38,9 +39,6 @@ const Gallery = () => {
             ))}
           </AnimatePresence>
         </ProductGalleryFirstChild>
-        <div>
-          {/* <InstagramApi /> */}
-        </div>
       </SubContainer>
     </Container>
   );
@@ -48,21 +46,23 @@ const Gallery = () => {
 export default Gallery;
 
 const Container = styled.div`
+  animation: ${opacityAnimation} 1s;
   height: 100vh;
   width: 100%;
 `;
 const SubContainer = styled.div`
+
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   overflow: hidden;
-  height: 600px;
+  height: 500px;
 `;
 const PrimaryContainer = styled.main`
   display: flex;
-  height: 100vh;
+  height: 500px;
   width: 50%;
   border-radius: 11rem;
   position: relative;
