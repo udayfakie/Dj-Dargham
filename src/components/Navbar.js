@@ -5,6 +5,7 @@ import logo from "../assets/ddlogo (2).png";
 import OPEN_MENU from "../assets/close.png";
 import CLOSE_MENU from "../assets/more (1).png";
 import { useState } from "react";
+import { opacityAnimation } from "../styles/GlobalStyles";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -71,6 +72,7 @@ const Navbar = () => {
 export default Navbar;
 
 export const NavContinaer = styled.nav`
+  animation: ${opacityAnimation} 1s;
   display: flex;
   width: 100%;
   height: 100px;

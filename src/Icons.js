@@ -28,7 +28,16 @@ const Contact = () => {
 
 export default Contact;
 
-const Container = styled.div``;
+const Container = styled.div`
+  margin-right: 30rem;
+  transition: all 1s ease-in-out;
+  @media (max-width: 821px) {
+    margin: 0;
+  }
+  @media (max-width: 425px) {
+    margin: 0;
+  }
+`;
 
 const Link = styled.a`
   font-size: 55px;

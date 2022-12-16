@@ -2,6 +2,7 @@ import React, { useEffect, useRef  } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import Icons from "../Icons";
+import { opacityAnimation } from "../styles/GlobalStyles";
 
 const Contact = () => {
   const form = useRef();
@@ -55,6 +56,8 @@ const Contact = () => {
 export default Contact;
 
 const Container = styled.div`
+  animation: ${opacityAnimation} 1s;
+
   width: 100%;
   height: 100vh;
   display: flex;
@@ -76,10 +79,18 @@ const MyForm = styled.form`
   height: auto;
   display: flex;
   align-items: center;
+  margin-right: 30rem;
   flex-direction: column;
   padding: 2vw 4vw;
   max-width: 600px;
   border-radius: 10px;
+  transition: all 1s ease-in-out;
+  @media (max-width: 821px) {
+    margin: 0;
+  }
+  @media (max-width: 425px) {
+    margin: 0;
+  }
 `;
 const Input = styled.input`
   width: 400px;
@@ -87,7 +98,8 @@ const Input = styled.input`
   margin: 10px 0;
   padding: 15px;
   outline: none;
-  color: #fff;
+  color: #000;
+  font-weight: 700;
   opacity: 0.5;
   background: gray;
   font-size: 20px;
