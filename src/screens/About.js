@@ -8,7 +8,8 @@ const About = () => {
     <Container>
       <Title>About me</Title>
       <Dargham>
-        <SubTitle>Dj / Party Producer</SubTitle>
+        <SubTitle>Dj / Party Producer </SubTitle>
+        
         {Text}
       </Dargham>
     </Container>
@@ -47,7 +48,7 @@ const Title = styled.h1`
     font-size: 28px;
   }
 `;
-const SubTitle = styled.h2`
+const SubTitle = styled.span`
   color: black;
   font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
