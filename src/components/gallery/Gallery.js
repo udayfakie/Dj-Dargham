@@ -4,6 +4,7 @@ import styled from "styled-components";
 import ProductImage from "./ProductImage";
 import { IMAGES, img } from "../../constants";
 import { opacityAnimation } from "../../styles/GlobalStyles";
+import InstagramApi from './InstagramApi'
 
 
 const Gallery = () => {
@@ -15,7 +16,7 @@ const Gallery = () => {
       ...productIds.filter((x) => x !== id),
       currentProductId,
     ];
-
+    
     setPrimaryProduct(id);
     setProductIds(newProductIds);
   };
@@ -40,6 +41,7 @@ const Gallery = () => {
           </AnimatePresence>
         </ProductGalleryFirstChild>
       </SubContainer>
+   <InstagramApi/>
     </Container>
   );
 };
